@@ -1,0 +1,14 @@
+pyproject.toml
+mpc_tutorial/__init__.py
+mpc_tutorial/config.py
+mpc_tutorial/controller.py
+mpc_tutorial/dynamics.py
+mpc_tutorial/plant.py
+mpc_tutorial/scenarios.py
+mpc_tutorial/models/cart.xml
+mujoco_mpc_tutorial.egg-info/PKG-INFO
+mujoco_mpc_tutorial.egg-info/SOURCES.txt
+mujoco_mpc_tutorial.egg-info/dependency_links.txt
+mujoco_mpc_tutorial.egg-info/entry_points.txt
+mujoco_mpc_tutorial.egg-info/requires.txt
+mujoco_mpc_tutorial.egg-info/top_level.txt

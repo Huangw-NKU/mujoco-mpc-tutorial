@@ -1,0 +1,58 @@
+{
+  "MPC N=40": {
+    "position_rmse_m": 0.733533780061825,
+    "final_error_m": 6.74482283358202e-08,
+    "final_speed_m_s": 1.5720740142101626e-07,
+    "max_speed_m_s": 1.2999999999999998,
+    "max_position_violation_m": 0.0,
+    "max_speed_violation_m_s": 0.0,
+    "max_abs_force_N": 2.0,
+    "control_energy_N2s": 6.464252115715192,
+    "mean_plan_ms": 0.6056570312921394,
+    "max_plan_ms": 2.0760019979206845,
+    "p95_plan_ms": 1.156098598585231,
+    "planned_steps": 160
+  },
+  "MPC full horizon": {
+    "position_rmse_m": 0.7335335432571254,
+    "final_error_m": 6.744506664269068e-08,
+    "final_speed_m_s": 1.5719694716046348e-07,
+    "max_speed_m_s": 1.3000000000000012,
+    "max_position_violation_m": 0.0,
+    "max_speed_violation_m_s": 1.1102230246251565e-15,
+    "max_abs_force_N": 2.0,
+    "control_energy_N2s": 6.464259667329211,
+    "mean_plan_ms": 8.43086041886636,
+    "max_plan_ms": 33.36144099739613,
+    "p95_plan_ms": 29.92001665115822,
+    "planned_steps": 160
+  },
+  "Open loop (same full horizon)": {
+    "position_rmse_m": 1.925479656804359,
+    "final_error_m": 3.922000703783482,
+    "final_speed_m_s": 0.7999980811245204,
+    "max_speed_m_s": 1.3000292107690161,
+    "max_position_violation_m": 3.122000703783482,
+    "max_speed_violation_m_s": 2.9210769016074778e-05,
+    "max_abs_force_N": 2.0,
+    "control_energy_N2s": 4.569470732804399,
+    "mean_plan_ms": 30.31468800327275,
+    "max_plan_ms": 30.31468800327275,
+    "p95_plan_ms": 30.31468800327275,
+    "planned_steps": 160
+  },
+  "PD kp=4 kd=1.2": {
+    "position_rmse_m": 0.7914504758473327,
+    "final_error_m": 0.03837174839381541,
+    "final_speed_m_s": 0.02654312872748438,
+    "max_speed_m_s": 2.3110727191983833,
+    "max_position_violation_m": 0.15930500042378837,
+    "max_speed_violation_m_s": 1.0110727191983833,
+    "max_abs_force_N": 2.0,
+    "control_energy_N2s": 13.416986571971762,
+    "mean_plan_ms": 0.0,
+    "max_plan_ms": 0.0,
+    "p95_plan_ms": 0.0,
+    "planned_steps": 160
+  }
+}

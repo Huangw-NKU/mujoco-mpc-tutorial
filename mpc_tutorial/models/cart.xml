@@ -1,0 +1,31 @@
+<mujoco model="MPC cart: force-controlled slide">
+  <compiler angle="radian"/>
+  <!-- 物理步长 5 ms；控制器每 10 个物理步更新一次，控制周期 50 ms。 -->
+  <option timestep="0.005" integrator="Euler" gravity="0 0 -9.81"/>
+  <visual><headlight ambient="0.5 0.5 0.5" diffuse="0.8 0.8 0.8"/><global offwidth="960" offheight="540"/><quality shadowsize="2048"/></visual>
+  <statistic center="0 0 0.15" extent="2.5"/>
+  <!-- 本例没有接触、摩擦和物理挡板。轨道边界是优化中的软约束。 -->
+  <default><geom contype="0" conaffinity="0"/></default>
+  <asset>
+    <texture name="grid" type="2d" builtin="checker" rgb1="0.12 0.15 0.19" rgb2="0.16 0.19 0.23" width="256" height="256"/>
+    <material name="floor" texture="grid" texrepeat="8 8" reflectance="0.1"/>
+  </asset>
+  <worldbody>
+    <light pos="0 -2 5" dir="0 0 -1" diffuse="0.9 0.9 0.9" ambient="0.25 0.25 0.25"/>
+    <camera name="overview" pos="0 -4 2.5" xyaxes="1 0 0 0 0.53 0.85"/>
+    <geom type="plane" size="4 2 0.1" material="floor"/>
+    <geom type="box" pos="0 0 0.045" size="2 0.07 0.035" rgba="0.4 0.45 0.52 1"/>
+    <geom type="box" pos="-1.8 0 0.085" size="0.012 0.3 0.015" rgba="0.85 0.4 0.15 1"/>
+    <geom type="box" pos="1.8 0 0.085" size="0.012 0.3 0.015" rgba="0.85 0.4 0.15 1"/>
+    <body name="goal" mocap="true" pos="1 -0.35 0.1">
+      <geom type="cylinder" size="0.1 0.04" rgba="0.25 0.8 0.45 0.8"/>
+    </body>
+    <body name="cart" pos="0 0 0.2">
+      <joint name="slide" type="slide" axis="1 0 0" damping="0" frictionloss="0" limited="false"/>
+      <geom type="box" size="0.16 0.13 0.1" mass="1" rgba="0.22 0.58 0.95 1"/>
+      <geom type="sphere" pos="0 0 0.13" size="0.035" mass="0" rgba="0.9 0.95 1 1"/>
+    </body>
+  </worldbody>
+  <!-- gear=1：ctrl 的数值就是牛顿 N，Python 中显式按 u_max 配置上限。 -->
+  <actuator><motor name="force" joint="slide" gear="1" ctrllimited="true" ctrlrange="-2 2"/></actuator>
+</mujoco>

@@ -1,0 +1,2 @@
+[console_scripts]
+mpc-demo = mpc_tutorial.cli:main

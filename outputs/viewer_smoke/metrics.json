@@ -1,0 +1,16 @@
+{
+  "MPC N=40": {
+    "position_rmse_m": 2.176576228403843,
+    "final_error_m": 2.1362501039186834,
+    "final_speed_m_s": 0.49999905698701597,
+    "max_speed_m_s": 0.49999905698701597,
+    "max_position_violation_m": 0.0,
+    "max_speed_violation_m_s": 0.0,
+    "max_abs_force_N": 2.0,
+    "control_energy_N2s": 0.9999962279550729,
+    "mean_plan_ms": 1.8344750016694888,
+    "max_plan_ms": 2.0973040009266697,
+    "p95_plan_ms": 2.068755801883526,
+    "planned_steps": 5
+  }
+}

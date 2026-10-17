@@ -1,0 +1,11 @@
+mujoco<4,>=3.2
+numpy<3,>=1.26
+scipy<2,>=1.11
+osqp<2,>=1.0
+matplotlib<4,>=3.8
+imageio<3,>=2.34
+imageio-ffmpeg<1,>=0.5
+pillow<13,>=10
+
+[dev]
+pytest<10,>=8

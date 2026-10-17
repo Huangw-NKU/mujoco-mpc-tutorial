@@ -1,0 +1,44 @@
+{
+  "MPC nominal plant": {
+    "position_rmse_m": 0.733533780061825,
+    "final_error_m": 6.74482283358202e-08,
+    "final_speed_m_s": 1.5720740142101626e-07,
+    "max_speed_m_s": 1.2999999999999998,
+    "max_position_violation_m": 0.0,
+    "max_speed_violation_m_s": 0.0,
+    "max_abs_force_N": 2.0,
+    "control_energy_N2s": 6.464252115715192,
+    "mean_plan_ms": 0.603177419043277,
+    "max_plan_ms": 2.0506529981503263,
+    "p95_plan_ms": 1.1544403048901586,
+    "planned_steps": 160
+  },
+  "MPC heavier, wrong model": {
+    "position_rmse_m": 0.8587345675351682,
+    "final_error_m": 0.0006053180607499264,
+    "final_speed_m_s": 0.0021661282653662266,
+    "max_speed_m_s": 1.2999938963876332,
+    "max_position_violation_m": 0.0,
+    "max_speed_violation_m_s": 0.0,
+    "max_abs_force_N": 2.0,
+    "control_energy_N2s": 15.986266374742536,
+    "mean_plan_ms": 0.9310690062193316,
+    "max_plan_ms": 2.19724299677182,
+    "p95_plan_ms": 1.897738297702744,
+    "planned_steps": 160
+  },
+  "MPC heavier, matched model": {
+    "position_rmse_m": 0.8376244510879544,
+    "final_error_m": 6.826802402493115e-06,
+    "final_speed_m_s": 3.017633601355663e-05,
+    "max_speed_m_s": 1.300000000000001,
+    "max_position_violation_m": 0.0,
+    "max_speed_violation_m_s": 8.881784197001252e-16,
+    "max_abs_force_N": 1.9999999999999998,
+    "control_energy_N2s": 12.209208142765295,
+    "mean_plan_ms": 1.1016633372946671,
+    "max_plan_ms": 7.3205299995606765,
+    "p95_plan_ms": 3.55389389842457,
+    "planned_steps": 160
+  }
+}

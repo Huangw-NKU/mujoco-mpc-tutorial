@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mujoco-mpc-tutorial"
+version = "0.1.0"
+description = "A Chinese, code-first introduction to constrained MPC in MuJoCo"
+requires-python = ">=3.10,<3.14"
+dependencies = [
+  "mujoco>=3.2,<4", "numpy>=1.26,<3", "scipy>=1.11,<2",
+  "osqp>=1.0,<2", "matplotlib>=3.8,<4", "imageio>=2.34,<3",
+  "imageio-ffmpeg>=0.5,<1", "pillow>=10,<13",
+]
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+[project.scripts]
+mpc-demo = "mpc_tutorial.cli:main"
+[tool.setuptools.package-data]
+mpc_tutorial = ["models/*.xml", "report_template.html"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]

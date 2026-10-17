@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: mujoco-mpc-tutorial
+Version: 0.1.0
+Summary: A Chinese, code-first introduction to constrained MPC in MuJoCo
+Requires-Python: <3.14,>=3.10
+Requires-Dist: mujoco<4,>=3.2
+Requires-Dist: numpy<3,>=1.26
+Requires-Dist: scipy<2,>=1.11
+Requires-Dist: osqp<2,>=1.0
+Requires-Dist: matplotlib<4,>=3.8
+Requires-Dist: imageio<3,>=2.34
+Requires-Dist: imageio-ffmpeg<1,>=0.5
+Requires-Dist: pillow<13,>=10
+Provides-Extra: dev
+Requires-Dist: pytest<10,>=8; extra == "dev"
